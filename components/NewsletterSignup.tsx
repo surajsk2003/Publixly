@@ -66,7 +66,7 @@ export default function NewsletterSignup() {
         <div className="relative">
           <div className="text-center mb-4 sm:mb-6">
             <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              📧 Subscribe to my newsletter
+              Subscribe to my newsletter
             </h3>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-300">
               Get the latest posts delivered right to your inbox.
