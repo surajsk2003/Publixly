@@ -32,7 +32,7 @@ export default function Home({ posts }: HomeProps) {
             
             <div className="max-w-4xl mx-auto mb-8 sm:mb-12 animate-slide-up px-4" style={{ animationDelay: '0.2s' }}>
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 leading-relaxed font-bold mb-3 sm:mb-4">
-                This Month's Space Highlights
+                This Month&apos;s Space Highlights
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-500 dark:text-gray-400 leading-relaxed">
                 Exploring AI, Innovation, Personal Growth, Politics & Code

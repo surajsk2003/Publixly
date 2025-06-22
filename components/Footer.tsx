@@ -46,7 +46,7 @@ export default function Footer() {
               <li><Link href="/articles" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Articles</Link></li>
               <li><Link href="/about" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">About</Link></li>
               <li><Link href="/newsletter" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Newsletter</Link></li>
-              <li><a href="/api/rss" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">RSS Feed</a></li>
+              <li><a href="/api/rss" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">RSS Feed</a></li>
             </ul>
           </div>
           
