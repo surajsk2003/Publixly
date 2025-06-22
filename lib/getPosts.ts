@@ -4,7 +4,16 @@ import matter from 'gray-matter'
 
 const postsDirectory = path.join(process.cwd(), 'content')
 
-export function getAllPosts() {
+interface Post {
+  slug: string
+  title: string
+  date: string
+  description: string
+  tags?: string[]
+  [key: string]: any
+}
+
+export function getAllPosts(): Post[] {
   const fileNames = fs.readdirSync(postsDirectory)
 
   return fileNames.map((fileName) => {
@@ -15,6 +24,8 @@ export function getAllPosts() {
     return {
       slug: data.slug || fileName.replace(/\.mdx$/, ''),
       ...data,
-    }
-  }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    } as Post
+  })
+  .filter((post) => post.date) // Only include posts with dates
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
