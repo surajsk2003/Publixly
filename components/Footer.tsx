@@ -18,7 +18,7 @@ export default function Footer() {
                 <span className="text-white font-black text-lg sm:text-xl">S</span>
               </div>
               <div className="min-w-0">
-                <h3 className="text-xl sm:text-2xl font-black gradient-text">Suraj's Blog</h3>
+                <h3 className="text-xl sm:text-2xl font-black gradient-text">Suraj&apos;s Blog</h3>
                 <p className="text-gray-400 text-xs sm:text-sm">Digital Creator & Innovator</p>
               </div>
             </div>

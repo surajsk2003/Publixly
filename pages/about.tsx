@@ -8,7 +8,7 @@ export default function About() {
         <h1 className="text-3xl font-bold mb-8">About Me</h1>
         <div className="prose prose-lg">
           <p>
-            Hi, I'm Suraj Kumar. I'm passionate about AI, education technology, 
+            Hi, I&apos;m Suraj Kumar. I&apos;m passionate about AI, education technology, 
             and building tools that make learning more accessible.
           </p>
           <p>
@@ -16,7 +16,7 @@ export default function About() {
             particularly how AI can transform learning experiences in India and beyond.
           </p>
           <p>
-            When I'm not coding or writing, you can find me exploring new technologies 
+            When I&apos;m not coding or writing, you can find me exploring new technologies 
             and thinking about how to make education more engaging and effective.
           </p>
         </div>
