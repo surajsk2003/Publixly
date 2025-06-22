@@ -40,7 +40,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden sm:block">
                   <span className="text-2xl font-black bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                    Suraj's Blog
+                    Suraj&apos;s Blog
                   </span>
                   <div className="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wider uppercase">
                     Digital Creator

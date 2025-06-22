@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="relative mt-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white overflow-hidden">
@@ -41,9 +43,9 @@ export default function Footer() {
           <div>
             <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">Quick Links</h4>
             <ul className="space-y-2 sm:space-y-3">
-              <li><a href="/articles" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Articles</a></li>
-              <li><a href="/about" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">About</a></li>
-              <li><a href="/newsletter" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Newsletter</a></li>
+              <li><Link href="/articles" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Articles</Link></li>
+              <li><Link href="/about" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">About</Link></li>
+              <li><Link href="/newsletter" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Newsletter</Link></li>
               <li><a href="/api/rss" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">RSS Feed</a></li>
             </ul>
           </div>
@@ -52,10 +54,10 @@ export default function Footer() {
           <div>
             <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">Categories</h4>
             <ul className="space-y-2 sm:space-y-3">
-              <li><a href="/category/ai-innovation" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🚀 AI & Innovation</a></li>
-              <li><a href="/category/life-growth" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🧠 Life & Growth</a></li>
-              <li><a href="/category/code-build" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">💻 Code & Build</a></li>
-              <li><a href="/category/politics" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🇮🇳 Politics</a></li>
+              <li><Link href="/category/ai-innovation" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🚀 AI & Innovation</Link></li>
+              <li><Link href="/category/life-growth" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🧠 Life & Growth</Link></li>
+              <li><Link href="/category/code-build" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">💻 Code & Build</Link></li>
+              <li><Link href="/category/politics" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🇮🇳 Politics</Link></li>
             </ul>
           </div>
         </div>

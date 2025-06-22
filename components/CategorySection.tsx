@@ -55,7 +55,7 @@ export default function CategorySection({ title, emoji, posts, categorySlug }: C
               >
                 <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mt-1.5 sm:mt-2 flex-shrink-0" />
                 <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 font-medium group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400 transition-colors duration-200 leading-relaxed">
-                  "{post}"
+                  &ldquo;{post}&rdquo;
                 </p>
               </div>
             ))}
