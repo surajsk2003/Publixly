@@ -18,8 +18,11 @@ type PostProps = {
     description: string
     tags?: string[]
     slug: string
+    image?: string
+    category?: string
   }
 }
+
 
 export default function Post({ source, frontMatter }: PostProps) {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
@@ -33,10 +36,30 @@ export default function Post({ source, frontMatter }: PostProps) {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <article className="lg:col-span-3">
             <header className="mb-8">
+              {frontMatter.image && (
+                <div className="mb-6 rounded-xl overflow-hidden mx-auto" style={{ maxWidth: '500px' }}>
+                  <img 
+                    src={frontMatter.image} 
+                    alt={frontMatter.title} 
+                    className="w-full h-auto object-cover rounded-xl shadow-lg" 
+                    style={{ maxHeight: '300px', objectPosition: 'center' }}
+                    loading="eager"
+                    onError={(e) => {
+                      console.error('Image failed to load:', frontMatter.image);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
               <h1 className="text-4xl font-bold mb-4 dark:text-white">{frontMatter.title}</h1>
               <div className="flex items-center gap-4 text-gray-600 dark:text-gray-400 flex-wrap">
                 <time>{new Date(frontMatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                 <ViewCounter slug={frontMatter.slug} />
+                {frontMatter.category && (
+                  <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
+                    {frontMatter.category}
+                  </span>
+                )}
                 {frontMatter.tags && (
                   <div className="flex gap-2">
                     {frontMatter.tags.map((tag) => (

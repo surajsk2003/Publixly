@@ -10,19 +10,19 @@ type CategoryPageProps = {
     description: string
     date: string
     tags?: string[]
+    category?: string
   }>
   category: {
     name: string
-    emoji: string
     slug: string
   }
 }
 
 const categories = {
-  'ai-innovation': { name: 'AI & Innovation', emoji: '🚀' },
-  'life-growth': { name: 'Life & Growth', emoji: '🧠' },
-  'code-build': { name: 'Code & Build', emoji: '💻' },
-  'politics': { name: 'Politics', emoji: '🇮🇳' }
+  'ai-innovation': { name: 'AI & Innovation'},
+  'life-growth': { name: 'Life & Growth'},
+  'code-build': { name: 'Code & Build'},
+  'politics': { name: 'Politics' }
 }
 
 export default function CategoryPage({ posts, category }: CategoryPageProps) {
@@ -34,8 +34,8 @@ export default function CategoryPage({ posts, category }: CategoryPageProps) {
       />
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4 dark:text-white flex items-center justify-center gap-3">
-            {category.emoji} {category.name}
+          <h1 className="text-4xl font-bold mb-4 dark:text-white flex items-center justify-center">
+            {category.name}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
             Explore all articles in {category.name.toLowerCase()}
@@ -77,21 +77,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const allPosts = getAllPosts()
   
-  // Filter posts by category (you can extend this logic based on your tagging system)
-  const categoryPosts = allPosts.filter(post => {
-    if (!post.tags) return false
-    
-    // Map category slugs to relevant tags
-    const categoryTagMap = {
-      'ai-innovation': ['AI', 'Innovation', 'Machine Learning', 'Technology'],
-      'life-growth': ['Personal Growth', 'Life', 'Self-Improvement'],
-      'code-build': ['Coding', 'Programming', 'Development', 'OCR'],
-      'politics': ['Politics', 'Democracy', 'India']
-    }
-    
-    const relevantTags = categoryTagMap[categorySlug as keyof typeof categoryTagMap] || []
-    return post.tags.some(tag => relevantTags.includes(tag))
-  })
+  // Filter posts by category field only
+  const categoryPosts = allPosts.filter(post => post.category === category.name)
 
   return {
     props: {

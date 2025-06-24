@@ -12,10 +12,18 @@ type HomeProps = {
     description: string
     date: string
     tags?: string[]
+    category?: string
   }>
+  categoryPosts: {
+    [key: string]: {
+      title: string
+      slug: string
+      posts: string[]
+    }
+  }
 }
 
-export default function Home({ posts }: HomeProps) {
+export default function Home({ posts, categoryPosts }: HomeProps) {
   return (
     <>
       <SEO title="Suraj's Blog" />
@@ -83,18 +91,12 @@ export default function Home({ posts }: HomeProps) {
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 animate-slide-up" style={{ animationDelay: '0.1s' }}>Discover content that interests you</p>
           </div>
           <div className="grid gap-4 sm:gap-6 lg:gap-8 xl:gap-10">
-            {[
-              { title: "AI & Innovation", emoji: "🚀", posts: ["How AI Will Reshape Rural India", "Building a Local LLM System at Home"], slug: "ai-innovation" },
-              { title: "Life & Growth", emoji: "🧠", posts: ["Masks We Wear: My Deep Self-Reflection", "5 Habits That Nearly Destroyed My Potential"], slug: "life-growth" },
-              { title: "Code & Build", emoji: "💻", posts: ["How I Built an OCR Engine for CPU Devices", "Genetic Algorithms for LSTM Tuning"], slug: "code-build" },
-              { title: "Politics", emoji: "🇮🇳", posts: ["Youth & Indian Democracy", "Narendra Modi: The Vision and the Critique"], slug: "politics" }
-            ].map((category, index) => (
-              <div key={category.slug} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            {Object.keys(categoryPosts).map((slug, index) => (
+              <div key={slug} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CategorySection
-                  title={category.title}
-                  emoji={category.emoji}
-                  posts={category.posts}
-                  categorySlug={category.slug}
+                  title={categoryPosts[slug].title}
+                  posts={categoryPosts[slug].posts}
+                  categorySlug={slug}
                 />
               </div>
             ))}
@@ -103,7 +105,6 @@ export default function Home({ posts }: HomeProps) {
 
         {/* Newsletter Section */}
         <section className="animate-slide-up">
-
           <NewsletterSignup />
         </section>
       </div>
@@ -113,7 +114,44 @@ export default function Home({ posts }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllPosts()
+  
+  // Define categories
+  const categories = {
+    'ai-innovation': { name: 'AI & Innovation' },
+    'life-growth': { name: 'Life & Growth' },
+    'code-build': { name: 'Code & Build' },
+    'politics': { name: 'Politics' }
+  }
+  
+  // Get posts for each category
+  const categoryPosts: {[key: string]: any} = {}
+  
+  Object.keys(categories).forEach(categorySlug => {
+    const categoryName = categories[categorySlug as keyof typeof categories].name
+    
+    // Filter posts by category field only
+    const filteredPosts = posts.filter(post => post.category === categoryName)
+    
+    // Get the titles of the latest 2 posts or fewer if not enough
+    const postTitles = filteredPosts.slice(0, 2).map(post => post.title)
+    
+    // If no posts found, use placeholder titles
+    const defaultPosts = [
+      `No articles yet in ${categoryName}`,
+      `Be the first to write about ${categoryName}`
+    ]
+    
+    categoryPosts[categorySlug] = {
+      title: categoryName,
+      slug: categorySlug,
+      posts: postTitles.length > 0 ? postTitles : defaultPosts
+    }
+  })
+  
   return {
-    props: { posts },
+    props: { 
+      posts,
+      categoryPosts
+    },
   }
 }

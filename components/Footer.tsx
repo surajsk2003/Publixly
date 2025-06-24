@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
               <div className="min-w-0">
                 <h3 className="text-xl sm:text-2xl font-black gradient-text">Suraj&apos;s Blog</h3>
-                <p className="text-gray-400 text-xs sm:text-sm">Digital Creator & Innovator</p>
+                <p className="text-gray-400 text-xs sm:text-sm">Digital Creator &amp; Innovator</p>
               </div>
             </div>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-4 sm:mb-6">
@@ -28,13 +28,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 sm:gap-4">
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors touch-manipulation">
-                <span className="text-sm">🐦</span>
+                <span className="text-sm">T</span>
               </a>
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors touch-manipulation">
-                <span className="text-sm">💼</span>
+                <span className="text-sm">L</span>
               </a>
               <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors touch-manipulation">
-                <span className="text-sm">📱</span>
+                <span className="text-sm">G</span>
               </a>
             </div>
           </div>
@@ -54,17 +54,17 @@ export default function Footer() {
           <div>
             <h4 className="text-base sm:text-lg font-bold mb-4 sm:mb-6">Categories</h4>
             <ul className="space-y-2 sm:space-y-3">
-              <li><Link href="/category/ai-innovation" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🚀 AI & Innovation</Link></li>
-              <li><Link href="/category/life-growth" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🧠 Life & Growth</Link></li>
-              <li><Link href="/category/code-build" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">💻 Code & Build</Link></li>
-              <li><Link href="/category/politics" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">🇮🇳 Politics</Link></li>
+              <li><Link href="/category/ai-innovation" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">AI &amp; Innovation</Link></li>
+              <li><Link href="/category/life-growth" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Life &amp; Growth</Link></li>
+              <li><Link href="/category/code-build" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Code &amp; Build</Link></li>
+              <li><Link href="/category/politics" className="text-sm sm:text-base text-gray-300 hover:text-white transition-colors touch-manipulation">Politics</Link></li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-white/10 pt-6 sm:pt-8 text-center">
           <p className="text-xs sm:text-sm text-gray-400">
-            &copy; 2025 Suraj Kumar. All rights reserved. Made with ❤️ and lots of ☕
+            &copy; 2025 Suraj Kumar. All rights reserved.
           </p>
         </div>
       </div>
