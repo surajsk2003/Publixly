@@ -1,16 +1,23 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
+const GA_TRACKING_ID = 'G-6WL5XTWK4P'
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
 export default function Analytics() {
   const router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      // Track page views
-      if (typeof window !== 'undefined') {
-        console.log(`Page view: ${url}`)
-        // Here you would integrate with your analytics service
-        // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: url })
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', GA_TRACKING_ID, {
+          page_path: url,
+        })
       }
     }
 

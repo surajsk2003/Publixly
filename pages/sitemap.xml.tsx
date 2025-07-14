@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next'
 import { getAllPosts } from '../lib/getPosts'
 
 function generateSiteMap(posts: any[]) {
-  const siteURL = 'https://yourdomain.com'
+  const siteURL = 'https://surajkumar.blog'
   
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

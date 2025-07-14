@@ -9,6 +9,7 @@ import ReadingProgress from '../../components/ReadingProgress'
 import TableOfContents from '../../components/TableOfContents'
 import ShareButtons from '../../components/ShareButtons'
 import ViewCounter from '../../components/ViewCounter'
+import Comments from '../../components/Comments'
 
 type PostProps = {
   source: MDXRemoteSerializeResult
@@ -29,7 +30,15 @@ export default function Post({ source, frontMatter }: PostProps) {
   
   return (
     <>
-      <SEO title={frontMatter.title} description={frontMatter.description} />
+      <SEO 
+        title={frontMatter.title} 
+        description={frontMatter.description}
+        type="article"
+        publishedTime={frontMatter.date}
+        keywords={frontMatter.tags?.join(', ')}
+        url={currentUrl}
+        image={frontMatter.image}
+      />
       <ReadingProgress />
       
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -77,6 +86,7 @@ export default function Post({ source, frontMatter }: PostProps) {
             </div>
             
             <ShareButtons url={currentUrl} title={frontMatter.title} />
+            <Comments />
           </article>
           
           <aside className="lg:col-span-1">

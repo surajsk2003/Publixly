@@ -1,8 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/articles/[slug]": "pages/articles/[slug].js",
-  "/category/[slug]": "pages/category/[slug].js"
-}
+{"/_app":"pages/_app.js","/_document":"pages/_document.js","/about":"pages/about.html","/api/rss":"pages/api/rss.js","/api/subscribe":"pages/api/subscribe.js","/newsletter":"pages/newsletter.html","/projects":"pages/projects.html","/articles":"pages/articles.js","/_error":"pages/_error.js","/articles/[slug]":"pages/articles/[slug].js","/category/[slug]":"pages/category/[slug].js","/":"pages/index.js","/sitemap.xml":"pages/sitemap.xml.js","/search":"pages/search.js","/404":"pages/404.html"}

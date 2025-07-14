@@ -40,6 +40,7 @@ export default function CategorySection({ title, posts, categorySlug, emoji }: C
             className={`p-2 sm:p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-blue-900/30 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-200 transform hover:scale-110 touch-manipulation flex-shrink-0 ${
               isExpanded ? 'rotate-180' : 'rotate-0'
             }`}
+            aria-label={isExpanded ? `Collapse ${title} category` : `Expand ${title} category`}
           >
             <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />

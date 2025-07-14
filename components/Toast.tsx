@@ -25,6 +25,7 @@ export default function Toast({ message, type, onClose }: ToastProps) {
         <p className="font-medium">{message}</p>
         <button 
           onClick={onClose}
+          aria-label="Close"
           className="ml-auto text-white/80 hover:text-white transition-colors"
         >
           ✕

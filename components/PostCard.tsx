@@ -30,7 +30,14 @@ export default function PostCard({ title, description, date, slug, tags }: PostC
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="w-2 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex-shrink-0" />
             <time className="text-xs sm:text-sm font-medium text-gray-500 dark:text-gray-400">
-              {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              {(() => {
+                try {
+                  const dateObj = new Date(date)
+                  return isNaN(dateObj.getTime()) ? date : dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+                } catch {
+                  return date
+                }
+              })()}
             </time>
           </div>
           
