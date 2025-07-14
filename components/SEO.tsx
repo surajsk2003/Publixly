@@ -25,7 +25,7 @@ export default function SEO({
   const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`
   const defaultDescription = "Publixly - Your go-to platform for insights on personal growth, productivity, and mindful living. Exploring the intersection of technology and human potential."
   const defaultKeywords = "personal development, productivity, mindfulness, technology, AI, education, self-improvement"
-  const siteUrl = "https://publixly.com"
+  const siteUrl = "https://my-blog-lemon-mu-45.vercel.app"
   const defaultImage = `${siteUrl}/og-image.jpg`
 
   return (
