@@ -21,11 +21,11 @@ export default function SEO({
   publishedTime,
   author = 'Suraj Kumar'
 }: SEOProps) {
-  const siteTitle = "Suraj's Blog"
+  const siteTitle = "Publixly"
   const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`
-  const defaultDescription = "Insights on personal growth, productivity, and mindful living. Exploring the intersection of technology and human potential."
+  const defaultDescription = "Publixly - Your go-to platform for insights on personal growth, productivity, and mindful living. Exploring the intersection of technology and human potential."
   const defaultKeywords = "personal development, productivity, mindfulness, technology, AI, education, self-improvement"
-  const siteUrl = "https://surajkumar.blog"
+  const siteUrl = "https://publixly.com"
   const defaultImage = `${siteUrl}/og-image.jpg`
 
   return (

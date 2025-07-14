@@ -34,14 +34,16 @@ export default function Navbar() {
             <div className="flex items-center">
               <Link href="/" className="group flex items-center gap-4">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-blue-500/25">
-                    <span className="text-white font-black text-xl">S</span>
-                  </div>
+                  <img 
+                    src="/logo.png" 
+                    alt="Publixly Logo" 
+                    className="w-12 h-12 rounded-2xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-blue-500/25"
+                  />
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-300" />
                 </div>
                 <div className="hidden sm:block">
                   <h1 className="text-2xl font-black bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">
-                    Suraj&apos;s Blog
+                    Publixly
                   </h1>
                   <p className="text-xs text-gray-500 dark:text-gray-400 font-medium tracking-wider uppercase">
                     Digital Creator

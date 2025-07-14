@@ -26,7 +26,7 @@ type HomeProps = {
 export default function Home({ posts, categoryPosts }: HomeProps) {
   return (
     <>
-      <SEO title="Suraj's Blog" />
+      <SEO title="Publixly" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Hero Section */}
         <section className="text-center mb-12 sm:mb-16 lg:mb-20 relative animate-fade-in">

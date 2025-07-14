@@ -5,8 +5,8 @@ export default function About() {
     <>
       <SEO 
         title="About" 
-        description="Suraj Kumar - Exploring personal growth, productivity, and mindful living through thoughtful writing and insights."
-        keywords="Suraj Kumar, personal development, productivity, mindfulness, self-improvement, blog"
+        description="Publixly - Exploring personal growth, productivity, and mindful living through thoughtful writing and insights."
+        keywords="Publixly, personal development, productivity, mindfulness, self-improvement, blog"
       />
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
