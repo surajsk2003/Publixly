@@ -32,9 +32,9 @@ export default function Home({ posts, categoryPosts }: HomeProps) {
         <section className="text-center mb-12 sm:mb-16 lg:mb-20 relative animate-fade-in">
           <div className="relative">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 sm:mb-8 bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent leading-tight animate-slide-up px-2">
-              Welcome to my
+              Crafting Ideas Into
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-pulse-glow">
-                Digital Universe
+                Digital Reality
               </span>
             </h1>
             
