@@ -11,4 +11,10 @@ module.exports = withMDX({
 
   compress: true,
   poweredByHeader: false,
+  
+  experimental: {
+    amp: {
+      skipValidation: true
+    }
+  }
 })

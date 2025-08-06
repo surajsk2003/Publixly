@@ -8,6 +8,9 @@ export default function Document() {
         <link rel="apple-touch-icon" href="/logo.png" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6171104448709105"
              crossOrigin="anonymous"></script>
+        <script async custom-element="amp-auto-ads"
+                src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+        </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WL5XTWK4P"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -21,6 +24,9 @@ export default function Document() {
         />
       </Head>
       <body>
+        <div dangerouslySetInnerHTML={{ 
+          __html: '<amp-auto-ads type="adsense" data-ad-client="ca-pub-6171104448709105"></amp-auto-ads>' 
+        }} />
         <Main />
         <NextScript />
       </body>

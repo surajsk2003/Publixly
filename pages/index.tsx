@@ -1,9 +1,12 @@
 import { GetStaticProps } from 'next'
+import { useAmp } from 'next/amp'
 import { getAllPosts } from '../lib/getPosts'
 import PostCard from '../components/PostCard'
 import NewsletterSignup from '../components/NewsletterSignup'
 import SEO from '../components/SEO'
 import CategorySection from '../components/CategorySection'
+
+export const config = { amp: 'hybrid' }
 
 type HomeProps = {
   posts: Array<{
@@ -24,6 +27,8 @@ type HomeProps = {
 }
 
 export default function Home({ posts, categoryPosts }: HomeProps) {
+  const isAmp = useAmp()
+  
   return (
     <>
       <SEO title="Publixly" />

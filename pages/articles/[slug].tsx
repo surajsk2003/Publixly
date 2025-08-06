@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
+import { useAmp } from 'next/amp'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import SEO from '../../components/SEO'
@@ -10,6 +11,8 @@ import TableOfContents from '../../components/TableOfContents'
 import ShareButtons from '../../components/ShareButtons'
 import ViewCounter from '../../components/ViewCounter'
 import Comments from '../../components/Comments'
+
+export const config = { amp: 'hybrid' }
 
 type PostProps = {
   source: MDXRemoteSerializeResult
@@ -26,6 +29,7 @@ type PostProps = {
 
 
 export default function Post({ source, frontMatter }: PostProps) {
+  const isAmp = useAmp()
   const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
   
   return (
