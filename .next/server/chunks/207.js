@@ -1,6 +1,0 @@
-"use strict";exports.id=207,exports.ids=[207],exports.modules={1207:(a,s,t)=>{t.r(s),t.d(s,{default:()=>Document});var e=t(997),n=t(6859);function Document(){return(0,e.jsxs)(n.Html,{lang:"en",children:[(0,e.jsxs)(n.Head,{children:[e.jsx("link",{rel:"icon",href:"/favicon.ico"}),e.jsx("link",{rel:"apple-touch-icon",href:"/logo.png"}),e.jsx("script",{async:!0,src:"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6171104448709105",crossOrigin:"anonymous"}),e.jsx("script",{async:!0,"custom-element":"amp-auto-ads",src:"https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"}),e.jsx("script",{async:!0,src:"https://www.googletagmanager.com/gtag/js?id=G-6WL5XTWK4P"}),e.jsx("script",{dangerouslySetInnerHTML:{__html:`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-6WL5XTWK4P');
-            `}})]}),(0,e.jsxs)("body",{children:[e.jsx("div",{dangerouslySetInnerHTML:{__html:'<amp-auto-ads type="adsense" data-ad-client="ca-pub-6171104448709105"></amp-auto-ads>'}}),e.jsx(n.Main,{}),e.jsx(n.NextScript,{})]})]})}}};

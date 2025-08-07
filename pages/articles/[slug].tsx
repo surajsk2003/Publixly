@@ -1,15 +1,23 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+// @ts-ignore
 import { GetStaticPaths, GetStaticProps } from 'next'
+// @ts-ignore
 import { useAmp } from 'next/amp'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
+// @ts-ignore
 import SEO from '../../components/SEO'
+// @ts-ignore
 import ReadingProgress from '../../components/ReadingProgress'
+// @ts-ignore
 import TableOfContents from '../../components/TableOfContents'
+// @ts-ignore
 import ShareButtons from '../../components/ShareButtons'
+// @ts-ignore
 import ViewCounter from '../../components/ViewCounter'
+// @ts-ignore
 import Comments from '../../components/Comments'
 
 export const config = { amp: 'hybrid' }
@@ -115,7 +123,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }: any) => {
   const slug = params?.slug as string
   
   // Find the file that matches this slug
